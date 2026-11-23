@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>C From Zero — Interactive C Course</title>
+    <meta
+      name="description"
+      content="Learn C from beginner to intermediate with short lessons, quizzes, and coding exercises. No installs, no internet needed."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to lesson</a>
+
+    <header class="topbar">
+      <button
+        id="menu-btn"
+        class="icon-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+        <span aria-hidden="true">☰</span> Lessons
+      </button>
+
+      <a class="brand" href="#hello">
+        <span aria-hidden="true">C</span>
+        <span class="brand-text">From Zero</span>
+      </a>
+
+      <div class="progress-wrap">
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Course progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <span id="progress-bar"></span>
+        </div>
+        <span id="progress-text">0/14</span>
+      </div>
+
+      <button id="reset-btn" class="btn ghost small" type="button">Reset</button>
+    </header>
+
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <div class="shell">
+      <aside id="sidebar" class="sidebar">
+        <nav id="lesson-nav" aria-label="Lessons"></nav>
+        <div class="sidebar-foot">
+          <p id="course-meta">14 lessons</p>
+          <p>No installs. No internet needed. Progress is saved in this browser.</p>
+        </div>
+      </aside>
+
+      <main id="main" tabindex="-1">
+        <article id="lesson"></article>
+        <noscript>
+          <p class="card">
+            This course needs JavaScript to render the lessons and check your answers.
+          </p>
+        </noscript>
+      </main>
+    </div>
+
+    <script src="lessons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
